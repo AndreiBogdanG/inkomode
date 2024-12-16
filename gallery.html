@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="gallery.css">
+    <title>Gallery</title>
+</head>
+<body>
+     <img id="logo" src="images/logo_small.png" alt="Logo">
+        <header>
+            <img id="menu-btn" src="images/menu_icon.png" alt="Menu  icon">
+            <nav id="menu" class="menu-class">
+                <img id="close-btn" src="images/close_btn.png" alt="Close button">
+                <ul class="menu-list">
+                  
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    
+        </header>
+   
+
+    <main>
+        <div id="gallery-container">
+            <img class="gallery-item" id="img-1" src="images/gallery/1.jpg" alt="" onclick="previousImage()">
+            <img class="gallery-item" id="img-2" src="images/gallery/2.jpg" alt="">
+            <img class="gallery-item" id="img-3" src="images/gallery/3.jpg" alt="" onclick="nextImage()">
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p id="copyright"></p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
