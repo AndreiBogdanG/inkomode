@@ -4,14 +4,17 @@
 body, html{
     margin: 0;
     padding: 0;
-    background-color: #ACBEBC;
+    background-color: #000000; 
+    /* background-color: #ACBEBC; */
     font-family: Oswald;
+
 }
 
 body{
     background-image: url(images/bkg.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    height: 100vh;
 }
 
 
@@ -29,21 +32,19 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* background-color: rgba(255, 255, 255, 0.8); */
     background-color: #A2B6B4;
-    /* margin-top: 1.2em; */
     height: 50px;
     border-top: 1em solid black;
 
 }
 
-
-#logo{
+.logo{
     width: 100px;
     height: 100px;
     position: absolute;
     top: 0;
     left: 5px;
+    z-index: 100;
 
 }
 
@@ -62,7 +63,7 @@ header{
     width: 100%;
     height: 100vh;
     background-color: rgb(207, 231, 231);
-      z-index: 100;
+    z-index: 1;
 }
 
 #menu ul{
@@ -91,7 +92,6 @@ header{
 
 .menu-list{
     font-size: 2em;
-    /* margin: auto auto; */
     gap: 2em;
 
 }
@@ -113,16 +113,15 @@ main{
 }
 
 #top-container{
-   height: 250px;
    text-align: center;
-
+   /* margin-bottom: 3em; */
 }
 
 .button{
     display: block;
     width: 100px;
     height: 30px;
-    margin: 0 auto;
+    margin: 1.8em auto;
     background-color: rgb(143, 179, 187);
     font-family: Oswald;
     letter-spacing: 0.2em;
@@ -132,12 +131,18 @@ main{
 }
 
 .tattoo-img{
-    width: 200px;
+    width: 250px;
+}
+
+.contact-link{
+    color: rgb(136, 207, 246);
+    font-size: larger;
+    font-weight: 500;
 }
 
 .tattoo-card{
     color: black;
-    width: 200px;
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -199,15 +204,61 @@ main{
 }
 
 footer{
-    color: rgb(69, 71, 71);
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    margin-top: auto;
     
 }
 
-@media screen and (min-width: 600px) {
+#copyright{
+    /* margin: 0.3em; */
+}
+
+
+#about-container, #gallery-container{
+    background-image: url(images/bkg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    
+}
+
+#about-text{
+    margin: 0;
+    padding: 1em;
+    width: 80vw;
+    max-width: 900px;
+    background-color: rgba(0, 0, 0, .7);
+    
+}
+
+.social-media{
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    width: 10em;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social-media-img{
+    width: 50px;
+}
+
+#title-contact{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+ @media screen and (min-width: 600px) {
     #close-btn, #menu-btn{
         display: none;
     }
@@ -239,7 +290,7 @@ footer{
     }
 
     #tattoo-cards{
-        width: 100vw;
+        width: 90vw;
         display: flex;
         justify-content: space-evenly;
         gap: 1em;
@@ -249,15 +300,19 @@ footer{
    #title{
     font-size: 2.5em;
     text-align: center;
+     margin: 0; 
    }
 
-   #top-container p{
-    font-size: 1em;
+   #about-text{
+    font-size: 0.8em;
    }
+  
+} 
 
-}
 
-@media screen and (min-width: 1024px){
+
+
+@media screen and (min-width: 1250px){
 
     #menu{
         font-size: 1em;
@@ -311,33 +366,44 @@ footer{
     }
 
    #testimonials-container{
+       max-width: 97vw;
        display: flex;
        background: none;
-       padding: 4em;
+       /* padding: 4em auto; */
    }
 
    #title-categories{
     display: flex;
-    width: 100vw;
+    /* width: 98vw; */
     margin-top: 5em;
     justify-content: space-evenly;
+    /* margin-left: 3em; */
    }
 
    .testimonial-card{
     padding: 2em;
     border-bottom: none;
-    /* box-shadow: inset 0 0 20px rgb(255, 255, 255, 0.15); */
     background: rgba(0, 0, 0, 0.6);
    
 }
 
-footer{
+   footer{
     color: white;
     font-size: larger;
     letter-spacing: 0.1em;
-
 }
    
+#title{
+    margin: 0.5em;
+    padding: 0;
+    font-size: 2em;
+}
+
+#title-about p{
+    /* margin: 0; */
+    /* height: 100%; */
+}
+
 
 
 

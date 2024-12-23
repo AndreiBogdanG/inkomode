@@ -8,7 +8,8 @@
     <title>Gallery</title>
 </head>
 <body>
-     <img id="logo" src="images/logo_small.png" alt="Logo">
+    <div id="gallery-container">
+     <a href="index.html"><img class="logo" src="images/logo_small.png" alt="Logo"></a>
         <header>
             <img id="menu-btn" src="images/menu_icon.png" alt="Menu  icon">
             <nav id="menu" class="menu-class">
@@ -17,7 +18,7 @@
                   
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="gallery.html" style="font-weight: 700;">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -25,21 +26,34 @@
         </header>
    
 
-    <main>
-        <div id="gallery-container">
-            <img class="gallery-item" id="img-1" src="images/gallery/1.jpg" alt="" onclick="previousImage()">
-            <img class="gallery-item" id="img-2" src="images/gallery/2.jpg" alt="">
-            <img class="gallery-item" id="img-3" src="images/gallery/3.jpg" alt="" onclick="nextImage()">
-
+    <!-- <main> -->
+     <div id="gallery-central-container">
+        <div id="gallery-left">
+        <h1 id="gallery-title">GALLERY</h1>
+        <p class="gallery-description">Browse through a number of photos just to make an idea of the possibilities.</p>
+        <p class="gallery-description">If you consider getting yourself a tattoo, please don't hesitate to <a class="contact-link" href="contact.html">contact</a> me!</p>
+       
+        <div id="gallery-navigation">
+            <button class="navigator" id="nav1" onclick="previousImage()"><img class="arrow" id="arrow-left" src="images/arrow-white.png" alt="">PREVIOUS</button>
+            <button class="navigator" id="nav2" onclick="nextImage()">NEXT<img class="arrow" src="images/arrow-white.png" alt=""></button>
+        </div>
+        </div>
+        <div id="gallery-right">
+        <img class="gallery-item" id="img-2" src="images/gallery/2.jpg" alt="">
+        <p id="tattoo-title"></p>
         </div>
 
-    </main>
+        
+</div>
+<footer>
+    <p id="copyright"></p>
+</footer>
+</div>
 
-    <footer>
-        <p id="copyright"></p>
-    </footer>
 
-    <script src="script.js"></script>
+</main>
+
+<script src="script.js"></script>
     
 </body>
 </html>
