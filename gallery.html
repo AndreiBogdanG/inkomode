@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="gallery.css">
     <title>Gallery</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="gallery-container">
-     <a href="index.html"><img class="logo" src="images/logo_small.png" alt="Logo"></a>
-        <header>
-            <img id="menu-btn" src="images/menu_icon.png" alt="Menu  icon">
-            <nav id="menu" class="menu-class">
-                <img id="close-btn" src="images/close_btn.png" alt="Close button">
-                <ul class="menu-list">
-                  
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="gallery.html" style="font-weight: 700;">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-    
-        </header>
-   
-
-    <!-- <main> -->
-     <div id="gallery-central-container">
+      <a href="index.html">
+        <img class="logo" src="images/logo_small.png" alt="Logo">
+      </a>
+      <header>
+        <img id="menu-btn" src="images/menu_icon.png" alt="Menu  icon">
+        <nav id="menu" class="menu-class">
+          <img id="close-btn" src="images/close_btn.png" alt="Close button">
+          <ul class="menu-list">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="gallery.html" style="font-weight: 700;">Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- <main> -->
+      <div id="gallery-central-container">
         <div id="gallery-left">
-        <h1 id="gallery-title">GALLERY</h1>
-        <p class="gallery-description">Browse through a number of photos just to make an idea of the possibilities.</p>
-        <p class="gallery-description">If you consider getting yourself a tattoo, please don't hesitate to <a class="contact-link" href="contact.html">contact</a> me!</p>
-       
-        <div id="gallery-navigation">
-            <button class="navigator" id="nav1" onclick="previousImage()"><img class="arrow" id="arrow-left" src="images/arrow-white.png" alt="">PREVIOUS</button>
-            <button class="navigator" id="nav2" onclick="nextImage()">NEXT<img class="arrow" src="images/arrow-white.png" alt=""></button>
-        </div>
+          <h1 id="gallery-title">GALLERY</h1>
+          <p class="gallery-description">Browse through a number of photos just to make an idea of the possibilities.</p>
+          <p class="gallery-description">If you consider getting yourself a tattoo, please don't hesitate to <a class="contact-link" href="contact.html">contact</a> me! </p>
+          <div id="gallery-navigation">
+            <button class="navigator" id="nav1" onclick="previousImage()">
+              <img class="arrow" id="arrow-left" src="images/arrow-white.png" alt="">PREVIOUS </button>
+            <button class="navigator" id="nav2" onclick="nextImage()">NEXT <img class="arrow" src="images/arrow-white.png" alt="">
+            </button>
+          </div>
         </div>
         <div id="gallery-right">
-        <img class="gallery-item" id="img-2" src="images/gallery/2.jpg" alt="">
-        <p id="tattoo-title"></p>
+          <img class="gallery-item" id="img-2" src="images/gallery/2.jpg" alt="">
+          <p id="tattoo-title"></p>
         </div>
-
-        
-</div>
-<footer>
-    <p id="copyright"></p>
-</footer>
-</div>
-
-
-</main>
-
-<script src="script.js"></script>
-    
-</body>
+      </div>
+      <footer>
+        <p id="copyright"></p>
+      </footer>
+    </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>

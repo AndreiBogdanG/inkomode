@@ -1,410 +1,463 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
-
-body, html{
-    margin: 0;
-    padding: 0;
-    background-color: #000000; 
-    /* background-color: #ACBEBC; */
-    font-family: Oswald;
-
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  font-family: Oswald;
 }
 
-body{
-    background-image: url(images/bkg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+  background-image: url(images/bkg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#instructions-container {
+  background-color: black;
+  height: 90vh;
+  opacity: 0.85;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2em;
+  font-size: 1em;
+  row-gap: 0;
+  letter-spacing: 0;
+  font-family: Oswald;
+  color: white;
+}
+
+#instructions-title {
+  text-align: center;
+  font-size: 3em;
+  margin: 0.5em;
+  display: flex;
+  gap: 1em;
+}
+
+#instructions {
+  color: black;
+  font-family: Oswald;
+  font-size: 1em;
+  height: 50vh;
+  width: 80vw;
+  padding: 1.5em;
+  background-color: rgb(231, 228, 228);
+}
+
+#instructions-close {
+  width: 1em;
+  height: 1em;
+
+  position: absolute;
+  right: 0.8em;
+  top: 0.5em;
+  cursor: pointer;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(25, 116, 165);
+}
+
+header {
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #a2b6b4;
+  height: 50px;
+  border-top: 1em solid black;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  z-index: 100;
+}
+
+#menu-btn {
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.menu-class {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  list-style: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(207, 231, 231);
+  z-index: 1;
+}
+
+#menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
+  text-align: center;
+  list-style: none;
+}
+
+#close-btn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 3em;
+  right: 3em;
+}
+
+.show-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list {
+  font-size: 2em;
+  gap: 2em;
+}
+
+#title {
+  position: relative;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  letter-spacing: 0.2em;
+}
+
+#top-container {
+  text-align: center;
+}
+
+.button {
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin: 1.8em auto;
+  background-color: rgb(143, 179, 187);
+  font-family: Oswald;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  border-radius: 0.5em;
+  border: none;
+}
+
+.tattoo-img {
+  width: 250px;
+}
+
+.contact-link,
+.click-here-link {
+  color: rgb(136, 207, 246);
+  font-size: larger;
+  font-weight: 500;
+}
+
+.click-here-link {
+  color: rgb(22, 78, 109);
+}
+
+.tattoo-card,
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  position: relative;
+  width: 100%;
+  min-width: 250px;
+  min-height: 400px;
+  height: auto;
+  color: black;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(6, 6, 6, 0.2);
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+
+.card-front,
+.card-back {
+  padding: 10px;
+}
+
+.flip-card-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+}
+.card-back {
+  transform-origin: center;
+  transform: rotateY(180deg);
+}
+
+.card-back,
+.card-front {
+  background-color: white;
+}
+
+.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.details-link {
+  background-color: rgb(143, 179, 187);
+  position: absolute;
+  bottom: 4%;
+  left: 5%;
+  width: 90%;
+}
+
+.arrow-btn,
+.arrow-btn-back {
+  width: 10px;
+  height: auto;
+}
+.arrow-btn-back {
+  transform: rotateY(180deg);
+}
+
+#testimonials-container {
+  width: 100vw;
+  background-color: black;
+}
+
+.testimonial-card {
+  color: white;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2em;
+  letter-spacing: 0.01em;
+  font-style: italic;
+  padding: 0.5em;
+  border-bottom: 1px solid rgb(106, 105, 105);
+  margin: 1em;
+}
+
+.testimonial-name {
+  font-size: 0.5em;
+  text-align: end;
+  margin: 0 2em;
+}
+
+footer {
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: auto;
+}
+
+#about-container,
+#gallery-container {
+  background-image: url(images/bkg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#about-text {
+  margin: 0;
+  padding: 1em;
+  width: 80vw;
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.social-media {
+  color: white;
+  font-size: 1.5em;
+  display: flex;
+  width: 10em;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social-media-img {
+  width: 50px;
+}
+
+#title-contact {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 600px) {
+  #instructions-container {
     height: 100vh;
-}
+  }
 
+  #close-btn,
+  #menu-btn {
+    display: none;
+  }
 
-a{
-color: initial;
-text-decoration: none;
-}
-
-a:hover{
-    color: rgb(25, 116, 165);
-}
-
-header{
-    padding: 0.5em 1em;
+  #gallery-central-container {
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #menu ul {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    color: rgb(245, 192, 179);
     justify-content: flex-end;
     align-items: center;
-    background-color: #A2B6B4;
-    height: 50px;
-    border-top: 1em solid black;
+    margin-right: 1em;
+  }
 
-}
-
-.logo{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 5px;
-    z-index: 100;
-
-}
-
-#menu-btn{
-    width: 40px;
-    height: 30px;
-    cursor: pointer;
-}
-
-.menu-class{
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    list-style: none;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(207, 231, 231);
-    z-index: 1;
-}
-
-#menu ul{
-    display: flex;
-    flex-direction: column;
-    justify-items: flex-end;
-    text-align: center;
-    /* gap: 1%; */
-    list-style: none;
-}
-
-#close-btn{
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    position: absolute;
-    top: 3em;
-    right: 3em;
-}
-
-.show-menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-list{
-    font-size: 2em;
-    gap: 2em;
-
-}
-
-
-#title{
-    position: relative;
-    color: white;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    color: white;
-    letter-spacing: 0.2em;
-    
-}
-
-#top-container{
-   text-align: center;
-   /* margin-bottom: 3em; */
-}
-
-.button{
-    display: block;
-    width: 100px;
-    height: 30px;
-    margin: 1.8em auto;
-    background-color: rgb(143, 179, 187);
-    font-family: Oswald;
-    letter-spacing: 0.2em;
-    cursor: pointer;
-    border-radius: 0.5em;
-    border: none;
-}
-
-.tattoo-img{
-    width: 250px;
-}
-
-.contact-link{
-    color: rgb(136, 207, 246);
-    font-size: larger;
-    font-weight: 500;
-}
-
-.tattoo-card{
-    color: black;
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(6, 6, 6, 0.2);
-    padding: 0.5em;
-    margin-bottom: 2em;
-    background-color: white;
-
-}
-.tattoo-card h2{
-    margin: 0.3em 0;
-
-}
-
-.tattoo-card p {
-    letter-spacing: 0.05em;
-    margin-top: 0.5em;
-}
-
-.details-link{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 1em;
-    background-color: rgb(143, 179, 187);
-    text-transform: uppercase;
-    margin: 1em;
-}
-
-
-.arrow-btn{
-    width: 10px;
+  #menu {
+    display: inline;
     height: auto;
+    font-size: 0.75em;
+    background: none;
+    position: absolute;
+    margin-top: 0.6em;
+  }
 
-}
-
-#testimonials-container{
-    width: 100vw;
-    background-color: black;
-}
-
-.testimonial-card{
-   
+  .menu-list {
     color: white;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2em;
-    letter-spacing: 0.01em;
-    font-style: italic;
-    padding: 0.5em;
-    border-bottom: 1px solid rgb(106, 105, 105);
-    margin: 1em;
-}
+    flex-direction: row;
+  }
 
-.testimonial-name{
-    font-size: 0.5em;
-    text-align: end;
-    margin: 0 2em;
-}
-
-footer{
-    color: rgb(255, 255, 255);
+  #tattoo-cards {
+    width: 90vw;
     display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-top: auto;
-    
-}
-
-#copyright{
-    /* margin: 0.3em; */
-}
-
-
-#about-container, #gallery-container{
-    background-image: url(images/bkg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    
-}
-
-#about-text{
-    margin: 0;
-    padding: 1em;
-    width: 80vw;
-    max-width: 900px;
-    background-color: rgba(0, 0, 0, .7);
-    
-}
-
-.social-media{
-    color: white;
-    font-size: 1.5em;
-    display: flex;
-    width: 10em;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.social-media-img{
-    width: 50px;
-}
-
-#title-contact{
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
-}
+    gap: 1em;
+    flex-wrap: wrap;
+  }
 
- @media screen and (min-width: 600px) {
-    #close-btn, #menu-btn{
-        display: none;
-    }
-
-    #menu ul{
-       display: flex;
-       flex-direction: row;
-       background: none;
-       color: rgb(245, 192, 179);
-       justify-content:flex-end;
-       align-items: center;
-       margin-right: 1em;
-    }
-
-    #menu{
-        display: inline;
-        height: auto;
-        font-size: 0.75em;
-        background: none;
-        position: absolute;
-        margin-top: 0.6em;
-
-    }
-   
-    .menu-list{
-        color: white;
-        flex-direction: row;    
-        
-    }
-
-    #tattoo-cards{
-        width: 90vw;
-        display: flex;
-        justify-content: space-evenly;
-        gap: 1em;
-        flex-wrap: wrap;
-    }
-
-   #title{
+  #title {
     font-size: 2.5em;
     text-align: center;
-     margin: 0; 
-   }
+    margin: 0;
+  }
 
-   #about-text{
+  #about-text {
     font-size: 0.8em;
-   }
-  
-} 
+  }
+}
 
+@media screen and (min-width: 1250px) {
+  #menu {
+    font-size: 1em;
+  }
 
+  #logo {
+    margin-left: 2em;
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
 
+  header {
+    justify-content: space-between;
+  }
 
-@media screen and (min-width: 1250px){
+  .menu-list {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    margin-top: 0.4em;
+  }
 
-    #menu{
-        font-size: 1em;
-    }
+  body {
+    background-size: cover;
+  }
 
-    #logo{
-        margin-left: 2em;
-        width: 100px;
-        height: auto;
-        position: absolute;
-        top: 2px;
-        left: 2px;
-    }
-   
-    header{
-        justify-content: space-between;
-    }
-
-
-    .menu-list{
-        margin: 0;
-        padding: 0;
-        align-items: center;
-        margin-top: 0.4em;
-    }
-
-
-    body{
-       background-size: cover;
-    }
-
-
-    #top-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        font-size: 1.6em;  
-      }
-
-    .button{
-        margin-top: 2em;
-        width: 10em;
-        height: 3em;
-        font-size: 0.7em;
-    }  
-
-    #tattoo-cards{
-        display: flex;
-        width: auto;   
-        gap: 3em;
-    }
-
-   #testimonials-container{
-       max-width: 97vw;
-       display: flex;
-       background: none;
-       /* padding: 4em auto; */
-   }
-
-   #title-categories{
+  #top-container {
     display: flex;
-    /* width: 98vw; */
-    margin-top: 5em;
+    flex-direction: column;
     justify-content: space-evenly;
-    /* margin-left: 3em; */
-   }
+    align-items: center;
+    font-size: 1.6em;
+    margin-right: 2em;
+  }
 
-   .testimonial-card{
+  .button {
+    margin-top: 2em;
+    width: 10em;
+    height: 3em;
+    font-size: 0.7em;
+  }
+
+  #tattoo-cards {
+    display: flex;
+    width: auto;
+    gap: 3em;
+  }
+
+  #testimonials-container {
+    max-width: 97vw;
+    display: flex;
+    background: none;
+  }
+
+  #title-categories {
+    display: flex;
+    margin-top: 5em;
+  }
+
+  .testimonial-card {
     padding: 2em;
     border-bottom: none;
     background: rgba(0, 0, 0, 0.6);
-   
-}
+  }
 
-   footer{
+  footer {
     color: white;
     font-size: larger;
     letter-spacing: 0.1em;
-}
-   
-#title{
+  }
+
+  #title {
     margin: 0.5em;
     padding: 0;
     font-size: 2em;
-}
-
-#title-about p{
-    /* margin: 0; */
-    /* height: 100%; */
-}
-
-
-
-
+  }
 }

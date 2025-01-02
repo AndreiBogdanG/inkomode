@@ -172,7 +172,7 @@ if (openBtn && closeBtn){
     })
 }
 
-copyright.innerText = `Copyright © ${new Date().getFullYear()} Ink'O'Mode Tattoos.`;
+copyright.innerText = `Copyright © ${new Date().getFullYear()} Ink.O.Mode Tattoos.`;
 
 
 function displayImages(){
@@ -208,3 +208,13 @@ if (secondImage) {
     nextImage()
 }
 
+
+let flipDivs = []
+// let flipLinks = []
+for (let i=1; i<=3; i++){
+   flipDivs[i] = document.getElementById(`flipDiv${i}`)
+//    flipLinks[i] = document.getElementById(`flipLink${i}`)
+   flipDivs[i].addEventListener("click", function() {
+    flipDivs[i].classList.toggle('flipped');
+   })
+}

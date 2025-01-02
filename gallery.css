@@ -1,176 +1,158 @@
-body, html{
-    padding: 0;
-    margin: 0;
-    background-color: #000000; 
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
 
-    text-align: center;
-    min-height: 100vh;
+  text-align: center;
+  min-height: 100vh;
 }
 
-
-body{
-    background-image: url(images/bkg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+body {
+  background-image: url(images/bkg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-main{
-    /* height: 100vh; */
-    justify-content: space-between;
+main {
+  /* height: 100vh; */
+  justify-content: space-between;
 }
 
-#gallery-navigation{
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
+#gallery-navigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
 }
 
-
-.gallery-item{
-    width: 82vw;
-    max-width: 500px;
-    height: auto;
-    border: 5px solid white;
+.gallery-item {
+  width: 82vw;
+  max-width: 500px;
+  height: auto;
+  border: 5px solid white;
 }
 
-.gallery-description{
-    color: white;
-    width: 30vw;
-    font-size: 1.2em;
-    margin: 0 auto;
-    display: none;
+.gallery-description {
+  color: white;
+  width: 30vw;
+  font-size: 1.2em;
+  margin: 0 auto;
+  display: none;
 }
 
-
-#img-1{
-    clip-path: polygon(100% 0, 100% 100%, 50% 50%);
-    height: 15vw;
-    width: auto;
-    opacity: 50%;
-    border: 5px solid rgb(255, 255, 255);
+#img-1 {
+  clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+  height: 15vw;
+  width: auto;
+  opacity: 50%;
+  border: 5px solid rgb(255, 255, 255);
 }
 
-
-#img-2{
-    margin-top: 2em;
-
+#img-2 {
+  margin-top: 2em;
 }
 
-#img-3{
-    clip-path: polygon(0 0, 0% 100%, 50% 50%);
-    height: 15vw;
-    width: auto;
-    opacity: 50%;
-    border: 5px solid rgb(255, 255, 255);
+#img-3 {
+  clip-path: polygon(0 0, 0% 100%, 50% 50%);
+  height: 15vw;
+  width: auto;
+  opacity: 50%;
+  border: 5px solid rgb(255, 255, 255);
 }
 
-
-
-#img-1:hover, #img-3:hover{
-    opacity: 100%;
-    cursor: pointer;
+#img-1:hover,
+#img-3:hover {
+  opacity: 100%;
+  cursor: pointer;
 }
 
-h1{
-    color: white;
+h1 {
+  color: white;
 }
 
-.arrow{
-    width: 20px;
-    margin: 0.5em;
+.arrow {
+  width: 20px;
+  margin: 0.5em;
 }
 
-#arrow-left{
-    transform: rotate(180deg);
+#arrow-left {
+  transform: rotate(180deg);
 }
 
-.navigator{
-    background: none;
-    cursor: pointer;
-    color: white;
-    display: flex;
-    align-items: center;
-    border: none;
-    font-family: Oswald;
-    letter-spacing: 0.1em;
+.navigator {
+  background: none;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  border: none;
+  font-family: Oswald;
+  letter-spacing: 0.1em;
 }
 
-#gallery-title{
-    margin-top: 0.5em;
-    font-size: 2em;
+#gallery-title {
+  margin-top: 0.5em;
+  font-size: 2em;
 }
 
-#tattoo-title{
-    color: white;
-    font-size: 1.5em;
-    margin: 0.4em;
-
-
+#tattoo-title {
+  color: white;
+  font-size: 1.5em;
+  margin: 0.4em;
 }
-
-
-
-
 
 @media screen and (min-width: 1000px) {
+  footer {
+    bottom: 0px;
+    color: white;
+    font-size: larger;
+    text-align: center;
+    margin-top: 3em;
+  }
 
-    footer{
-        bottom: 0px;
-        color: white;
-        font-size: larger;
-        text-align: center;
-        margin-top: 3em;
-    }
-    
-    #copyright{
-        margin: 0.3em;
-    
-    }
-      
-    
-       #gallery-central-container{
-        width: 100vw;
-        height: 100vh;
-    
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-       }
-    
-       #gallery-left{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-       }
-    
-    
-       #gallery-right{
-        display: flex;
-        flex-direction: column;
-       }
-    
-       #gallery-navigation{
-        gap: 6em;
-       }
-    
-       footer{
-        margin: 0;
-       }
-    
-       .navigator{
-           font-size: 2em;   
-        }
-    
-       #gallery-title{
-            font-size: 3em;
-        }
-    
-       
-    
-        .gallery-description{
-            display: inline;
-             }
-    
-    }
+  #copyright {
+    margin: 0.3em;
+  }
+
+  #gallery-central-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #gallery-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  #gallery-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #gallery-navigation {
+    gap: 6em;
+  }
+
+  footer {
+    margin: 0;
+  }
+
+  .navigator {
+    font-size: 2em;
+  }
+
+  #gallery-title {
+    font-size: 3em;
+  }
+
+  .gallery-description {
+    display: inline;
+  }
+}

@@ -1,89 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>InkOMode</title>
-</head>
-<body>
-    <a href="index.html"><img class="logo" src="images/logo_small.png" alt="Logo"></a>
+  </head>
+  <body>
+    <a href="index.html">
+      <img class="logo" src="images/logo_small.png" alt="Logo">
+    </a>
     <header>
-        <img id="menu-btn" src="images/menu_icon.png" alt="Menu  icon">
-        <nav id="menu" class="menu-class">
-            <img id="close-btn" src="images/close_btn.png" alt="Close button">
-            <ul class="menu-list">
-              
-                <li><a href="#" style="font-weight: 700">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
+      <img id="menu-btn" src="images/menu_icon.png" alt="Menu  icon">
+      <nav id="menu" class="menu-class">
+        <img id="close-btn" src="images/close_btn.png" alt="Close button">
+        <ul class="menu-list">
+          <li>
+            <a href="#" style="font-weight: 700">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="gallery.html">Gallery</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-
     <main>
-       <div id="title-categories"> 
-
+      <div id="title-categories">
         <div id="top-container">
-           <h1 id="title">Ink.O.Mode</h1>
-           <p>HOME OF YOUR TATTOOS</p>
-           <a href="gallery.html"><button class="button">GALLERY</button></a>
+          <h1 id="title">Ink.O.Mode</h1>
+          <p>HOME OF YOUR TATTOOS</p>
+          <a href="gallery.html">
+            <button class="button">GALLERY</button>
+          </a>
         </div>
-
-        <div id="tattoo-cards"> 
-         <div class="tattoo-card">
-            <img class="tattoo-img" src="images/bw.jpg" alt="Black and White Tattoos">
-            <h2>Black & White</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, nam.</p>
-            <a class="details-link" href="#">Details <img class="arrow-btn" src="images/arrow-black.png" alt="arrow buttn"></a>
-         </div>
-
-         <div class="tattoo-card">
-            <img class="tattoo-img" src="images/color.jpg" alt="Black and White Tattoos">
-            <h2>Color</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, nam.</p>
-            <a class="details-link" href="#">Details <img class="arrow-btn" src="images/arrow-black.png" alt="arrow buttn"></a>
-         </div>
-
-         <div class="tattoo-card">
-            <img class="tattoo-img" src="images/care.jpg" alt="Black and White Tattoos">
-            <h2>Tattoo Care</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, nam.</p>
-            <a class="details-link" href="#">Details <img class="arrow-btn" src="images/arrow-black.png" alt="arrow buttn"></a>
-         </div>
-
+        <div id="tattoo-cards">
+          <div class="tattoo-card" id="flipDiv1">
+            <div class="flip-card-inner">
+              <div class="card-front">
+                <img class="tattoo-img" src="images/bw.jpg" alt="Black and White Tattoos">
+                <h2>Black & White</h2>
+                <p>Most common type of tattoos.</p>
+                <div class="details-link">Details <img class="arrow-btn" src="images/arrow-black.png" alt="arrow buttn">
+                </div>
+              </div>
+              <div class="card-back">
+                <img class="tattoo-img" src="images/bw.jpg" alt="Black and White Tattoos">
+                <h2>Black & White</h2>
+                <p>Black and White actually means black ink and different shades of gray.</p>
+                <div class="details-link">
+                  <img class="arrow-btn-back" src="images/arrow-black.png" alt="arrow buttn"> Back
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tattoo-card" id="flipDiv2">
+            <div class="flip-card-inner">
+              <div class="card-front">
+                <img class="tattoo-img" src="images/color.jpg" alt="Black and White Tattoos">
+                <h2>Color</h2>
+                <p>Give a little life to your tattoos.</p>
+                <div id="flipLink2" class="details-link" href="#">Details <img class="arrow-btn" src="images/arrow-black.png" alt="arrow buttn">
+                </div>
+              </div>
+              <div class="card-back">
+                <img class="tattoo-img" src="images/color.jpg" alt="Black and White Tattoos">
+                <h2>Color</h2>
+                <p>Color tattoos are more spectacular, but also more expensive.</p>
+                <div class="details-link">
+                  <img class="arrow-btn-back" src="images/arrow-black.png" alt="arrow buttn"> Back
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tattoo-card" id="flipDiv3">
+            <div class="flip-card-inner">
+              <div class="card-front">
+                <img class="tattoo-img" src="images/care.jpg" alt="Black and White Tattoos">
+                <h2>Tattoo Care</h2>
+                <p>OK, you've got your tattoo. Now what?</p>
+                <div id="flipLink3" class="details-link" href="#">Details <img class="arrow-btn" src="images/arrow-black.png" alt="arrow buttn">
+                </div>
+              </div>
+              <div class="card-back">
+                <img class="tattoo-img" src="images/care.jpg" alt="Black and White Tattoos">
+                <h2>Tattoo Care</h2>
+                <p>It's not enough to get the ink, click <a class="click-here-link" href="instructions.html">here</a> to find out how to keep it. </p>
+                <div class="details-link">
+                  <img class="arrow-btn-back" src="images/arrow-black.png" alt="arrow buttn"> Back
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
       </div>
-
-        <div id="testimonials-container">
-            <div class="testimonial-card">
-                <p class="testimonial-title">"Very light hand, can't believe it hurt so little."</p>
-                <p class="testimonial-name">--Alexandra G.</p>
-             </div>
-
-            <div class="testimonial-card">
-               <p class="testimonial-title">"Great job, very pleased!"</p>
-               <p class="testimonial-name">--Jane Doe</p>
-            </div>
-
-            <div class="testimonial-card">
-               <p class="testimonial-title">"Very bad idea. Should have stayed home."</p>
-               <p class="testimonial-name">--Nobody Ever.</p>
-            </div>
-
-
+      <div id="testimonials-container">
+        <div class="testimonial-card">
+          <p class="testimonial-title">"Very light hand, can't believe it hurt so little."</p>
+          <p class="testimonial-name">--Alexandra G.</p>
         </div>
-
-
-
+        <div class="testimonial-card">
+          <p class="testimonial-title">"Great job, very pleased!"</p>
+          <p class="testimonial-name">--Jane Doe</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-title">"Very bad idea. Should have stayed home."</p>
+          <p class="testimonial-name">--Nobody Ever.</p>
+        </div>
+      </div>
     </main>
-
     <footer>
-     <p id="copyright"></p>
+      <p id="copyright"></p>
     </footer>
     <script src="script.js" type="module"></script>
-</body>
+  </body>
 </html>
